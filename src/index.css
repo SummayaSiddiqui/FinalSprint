@@ -72,7 +72,7 @@ body {
   text-decoration: underline;
 }
 
-/* .app-container {
+.product-container {
   display: flex;
   width: 500px;
   height: auto;
@@ -83,7 +83,68 @@ body {
   border-radius: 5px;
   margin: 20px;
   padding: 20px;
-} */
+}
+
+/* Product List Styles*/
+.product-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Adjust the maximum width as needed */
+  margin: 20px auto; /* Center horizontally */
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between boxes */
+  justify-content: center; /* Center horizontally */
+}
+
+.product-box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 200px; /* Adjust the width as needed */
+  text-align: center;
+  background-color: #fff;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.product-title {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.product-box a {
+  color: inherit; /* Ensures the link color matches the box styling */
+  text-decoration: none; /* Removes default link underline */
+}
 
 /* Check out component */
 

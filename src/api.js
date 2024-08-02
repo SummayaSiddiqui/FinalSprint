@@ -5,6 +5,7 @@ const products = [
     description:
       "A book by Yuval Noah Harari that explores the history of humankind from the Stone Age to the present.",
     price: 19.99,
+    image: "../public/images/sapiens.png",
   },
   {
     id: 2,
