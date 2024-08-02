@@ -100,47 +100,55 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Product Grid */
 .product-grid {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column; /* Arrange items vertically */
   gap: 20px; /* Adjust the gap between boxes */
   justify-content: center; /* Center horizontally */
 }
 
+/* Product Box */
 .product-box {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  width: 200px; /* Adjust the width as needed */
+  width: 900px; /* Adjust the width as needed */
   text-align: center;
   background-color: #fff;
 }
 
+/* Product Image */
 .product-image {
-  width: 100%;
-  height: auto;
+  width: 150px; /* Set the width you prefer */
+  height: 250px; /* Set the height you prefer */
+  object-fit: cover; /* Ensures the image covers the container, cropping if necessary */
   border-bottom: 1px solid #ddd;
   margin-bottom: 10px;
 }
 
+/* Product Title */
 .product-title {
   font-size: 18px;
   margin: 10px 0;
 }
 
+/* Product Description */
 .product-description {
   font-size: 14px;
   color: #555;
   margin: 10px 0;
 }
 
+/* Product Price */
 .product-price {
   font-size: 16px;
   font-weight: bold;
   margin: 10px 0;
 }
 
+/* Ensure link styling matches box styling */
 .product-box a {
   color: inherit; /* Ensures the link color matches the box styling */
   text-decoration: none; /* Removes default link underline */
