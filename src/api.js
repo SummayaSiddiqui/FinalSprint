@@ -41,19 +41,19 @@ const products = [
   },
   {
     id: 6,
-    name: "The Rise and Fall of the Third Reich",
+    name: "In the Footsteps of the Prophet: Lessons from the Life of Muhammad",
     description:
-      "A book by William L. Shirer that chronicles the history of Nazi Germany from its origins to its downfall.",
+      "A book by Tariq Ramadan that explores the life of the Prophet Muhammad and provides insights into his teachings and legacy.",
     price: 21.0,
-    image: "images/riseandfallthirdreich.png",
+    image: "images/footstepsprophet.png",
   },
   {
     id: 7,
-    name: "The Histories",
+    name: "The History of the Decline and Fall of the Roman Empire",
     description:
-      "An ancient Greek text by Herodotus, considered the first work of history in Western literature.",
-    price: 12.0,
-    image: "images/histories.png",
+      "A seminal work by Edward Gibbon that chronicles the history of Rome from the height of the empire to the fall of the Byzantine Empire.",
+    price: 25.0,
+    image: "images/declinefallromanempire.png",
   },
   {
     id: 8,
@@ -78,22 +78,6 @@ const products = [
       "A book by John Lewis Gaddis that offers a fresh perspective on the Cold War, detailing the geopolitical struggle between the U.S. and the Soviet Union.",
     price: 19.5,
     image: "images/coldwarnewhistory.png",
-  },
-  {
-    id: 11,
-    name: "The Age of Empires",
-    description:
-      "A comprehensive examination of the rise and fall of empires throughout history, exploring their impact on the world.",
-    price: 20.0,
-    image: "images/ageofempires.png",
-  },
-  {
-    id: 12,
-    name: "The World at War",
-    description:
-      "A detailed account of the global conflict of World War I, including its causes, major battles, and aftermath.",
-    price: 23.0,
-    image: "images/worldatwar.png",
   },
 ];
 

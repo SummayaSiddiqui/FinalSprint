@@ -15,16 +15,18 @@ const ProductList = () => {
       <div className="product-grid">
         {products.map((product) => (
           <div key={product.id} className="product-box">
-            <h2 className="product-title">{product.name}</h2>
             <img
               src={product.image}
               alt={product.name}
               className="product-image"
             />
-
-            <p className="product-description">{product.description}</p>
-            <p className="product-price">${product.price.toFixed(2)}</p>
-            <Link to={`/products/${product.id}`}>View Details</Link>
+            <div className="product-details">
+              <h2 className="product-title">{product.name}</h2>
+              <br />
+              <p className="product-description">{product.description}</p>
+              <p className="product-price">${product.price.toFixed(2)}</p>
+              <Link to={`/products/${product.id}`}>View Details</Link>
+            </div>
           </div>
         ))}
       </div>

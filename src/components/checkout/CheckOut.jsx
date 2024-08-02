@@ -1,4 +1,3 @@
-// Checkout.jsx
 import React from "react";
 import { useShoppingCart } from "../shoppingcartcontext/ShoppingCartContext";
 
