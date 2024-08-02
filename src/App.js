@@ -1,10 +1,9 @@
-// App.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductList from "./components/productlist/ProductList";
 import ProductDetails from "./components/productdetails/ProductDetails";
 import ShoppingCart from "./components/shoppingcart/ShoppingCart";
-import CheckOut from "./components/checkOut/CheckOut";
+import CheckOut from "./components/checkout/CheckOut";
 import { ShoppingCartProvider } from "./components/shoppingcartcontext/ShoppingCartContext";
 
 const App = () => {
