@@ -8,17 +8,23 @@ const ProductDetails = () => {
   const product = getProductById(parseInt(id));
   const { addToCart } = useShoppingCart();
 
+  console.log("Product Image URL:", product.image); // Ensure this is a valid URL
   return (
-    <div>
+    <div className="detail-container">
       <h1>{product.name}</h1>
-      <img
-        src={product.image}
-        alt={product.name}
-        style={{ width: "300px", height: "auto" }}
-      />
-      <p>{product.description}</p>
-      <p>Price: ${product.price}</p>
+      <p className="product-description">{product.description}</p>
+      <div key={product.id} className="book-details">
+        <div className="book-price">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="detail-image"
+          />
 
+          <p className="product-price">Price: ${product.price}</p>
+        </div>
+        <p className="product-description">{product.summary}</p>
+      </div>
       <button onClick={() => addToCart(product)}>Add to Cart</button>
     </div>
   );
