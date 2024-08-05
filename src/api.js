@@ -16,6 +16,8 @@ const products = [
       "A book by Jared Diamond that examines the factors influencing the development of human societies throughout history.",
     price: 14.99,
     image: "/images/gunsandgerms.png",
+    summary:
+      "The book offers a compelling exploration into the forces that shaped the modern world. This groundbreaking book delves into why certain civilizations conquered and dominated others, uncovering the deep-seated factors behind the disparities in power and wealth. Diamond's analysis spans geography, biology, and anthropology, revealing how environmental and societal factors—rather than inherent differences between people—determined the trajectories of various societies. By challenging conventional historical narratives, the book provides a thought-provoking perspective on the origins of inequality and the interconnectedness of human development. Whether you're passionate about history, sociology, or simply curious about the forces that have shaped our world, this book offers valuable insights and a captivating narrative that will change the way you view human history.",
   },
   {
     id: 3,
@@ -24,6 +26,8 @@ const products = [
       "A comprehensive book by Susan Wise Bauer that covers the history of ancient civilizations from their origins to the fall of the Roman Empire.",
     price: 22.5,
     image: "/images/historyancientworld.png",
+    summary:
+      "The writer presents an engaging and comprehensive survey of ancient history. This book offers a sweeping overview of the development of early civilizations, tracing the rise and fall of empires from Mesopotamia and Egypt to Greece and Rome. Bauer’s narrative is both detailed and accessible, blending historical analysis with vivid storytelling to bring ancient societies to life. It delves into the political, social, and cultural transformations that shaped the ancient world, providing readers with a deeper understanding of how early societies laid the foundations for the modern era. Ideal for history enthusiasts and students alike, this book offers a rich tapestry of human achievement and conflict, making it a compelling read for anyone interested in the origins of Western civilization.",
   },
   {
     id: 4,
@@ -32,6 +36,8 @@ const products = [
       "A book by Howard Zinn that presents American history through the eyes of ordinary people rather than political leaders.",
     price: 17.99,
     image: "/images/peopleshistoryus.png",
+    summary:
+      "This masterpiece offers a groundbreaking perspective on American history by focusing on the experiences of marginalized and often overlooked groups. Zinn's narrative challenges traditional historical accounts by highlighting the struggles and contributions of indigenous peoples, enslaved Africans, women, laborers, and other ordinary citizens who have been sidelined in mainstream histories. Through a compelling and critical lens, the book explores key events and movements in American history, shedding light on the conflicts, injustices, and resistance that have shaped the nation. This book is both a powerful tool for understanding the complexities of U.S. history and a call to acknowledge and address historical inequities. For readers seeking a more inclusive and thought-provoking view of America's past, Zinn's work provides a vivid and essential counter-narrative to conventional historical perspectives.",
   },
   {
     id: 5,
@@ -40,6 +46,8 @@ const products = [
       "A book by Peter Frankopan that provides a history of the world from the perspective of the Silk Roads and the East.",
     price: 18.5,
     image: "/images/silkroads.png",
+    summary:
+      "It depicts a refreshing and expansive view of global history through the lens of the Silk Roads—the vast network of trade routes connecting the East and West. Frankopan's work repositions the traditional focus of Western history, highlighting how these ancient routes were central to the development of civilizations, commerce, and cultural exchange. By tracing the connections between diverse regions such as China, Persia, the Middle East, and Europe, the book reveals the profound impact of cross-cultural interactions on the world’s development. Through vivid storytelling and rigorous scholarship, Frankopan provides a broader understanding of how global networks shaped historical events, shifting the narrative from a Eurocentric view to a more interconnected perspective. This book is a compelling read for those interested in the complex web of historical connections that have influenced our world today.",
   },
   {
     id: 6,
@@ -48,6 +56,8 @@ const products = [
       "A book by Tariq Ramadan that explores the life of the Prophet Muhammad and provides insights into his teachings and legacy.",
     price: 21.0,
     image: "/images/footstepsprophet.png",
+    summary:
+      "The book offers a profound and insightful exploration of the life and teachings of the Prophet Muhammad. Ramadan delves into the historical and spiritual significance of Muhammad's life, presenting a nuanced understanding of his character, actions, and the principles he espoused. The book highlights the ethical and moral lessons drawn from the Prophet's experiences, aiming to offer guidance and inspiration for contemporary readers. Ramadan's approach combines historical analysis with personal reflection, making the teachings of Muhammad accessible and relevant to modern audiences. This book is ideal for those seeking to understand the profound impact of the Prophet's life on both historical and contemporary contexts, providing a thoughtful and respectful examination of his legacy.",
   },
   {
     id: 7,
@@ -56,6 +66,8 @@ const products = [
       "A seminal work by Edward Gibbon that chronicles the history of Rome from the height of the empire to the fall of the Byzantine Empire.",
     price: 25.0,
     image: "/images/declinefallromanempire.png",
+    summary:
+      "This books is considered as a seminal work in historical literature that offers a sweeping and critical examination of the Roman Empire's collapse. Written in the 18th century, Gibbon’s magnum opus covers the history of Rome from the height of its power to the fall of Constantinople, providing a detailed analysis of the factors that led to the empire's eventual decline. His work is renowned for its rigorous scholarship, elegant prose, and insightful commentary on the political, social, and economic reasons behind Rome's downfall. Gibbon explores themes such as military overreach, internal corruption, and the rise of Christianity, presenting a multifaceted view of the empire’s fall. This book remains a cornerstone of historical study, offering readers a comprehensive and thought-provoking look at one of history's most significant and complex periods.",
   },
   {
     id: 8,
@@ -64,6 +76,8 @@ const products = [
       "A comprehensive account of World War II by Winston Churchill, covering the global conflict in detail.",
     price: 25.0,
     image: "/images/secondworldwar.png",
+    summary:
+      "It is a comprehensive and authoritative account of World War II, authored by the British Prime Minister who played a pivotal role during the conflict. Written in the immediate aftermath of the war, Churchill's work provides a detailed and firsthand perspective on the key events, strategies, and decisions that shaped the course of the war. The book covers the global scope of the conflict, from the rise of fascist powers to the ultimate defeat of the Axis forces, offering insights into the political, military, and diplomatic aspects of the war. Churchill’s narrative combines personal experience with strategic analysis, providing a compelling and insightful chronicle of one of the most consequential periods in modern history. This book is essential for anyone seeking a deep understanding of World War II from the perspective of one of its most influential leaders.",
   },
   {
     id: 9,
@@ -72,6 +86,8 @@ const products = [
       "A book by Robert B. Marks that examines the transformative changes from the 16th to the 20th century that shaped the modern world.",
     price: 16.75,
     image: "/images/makingmodernworld.png",
+    summary:
+      "The writer provides an expansive exploration of the historical processes that have shaped the contemporary world. The book examines the major events, transformations, and cultural shifts from the early modern period to the present day, focusing on how these changes have influenced global dynamics. Marks integrates political, economic, social, and cultural histories to offer a comprehensive view of the factors that contributed to the development of modern societies. By connecting diverse historical trends and narratives, the book highlights the interconnectedness of global history and its impact on today’s world. This work is ideal for readers seeking a broad and nuanced understanding of how historical developments have shaped the modern era.",
   },
   {
     id: 10,
@@ -80,6 +96,8 @@ const products = [
       "A book by John Lewis Gaddis that offers a fresh perspective on the Cold War, detailing the geopolitical struggle between the U.S. and the Soviet Union.",
     price: 19.5,
     image: "/images/coldwarnewhistory.png",
+    summary:
+      "This book provides a a fresh and insightful perspective on one of the most significant geopolitical conflicts of the 20th century. Gaddis, a renowned historian, revisits the Cold War era with a balanced and comprehensive analysis, drawing on new sources and interpretations to offer a clearer understanding of the conflict between the United States and the Soviet Union. The book explores the origins, key events, and consequences of the Cold War, shedding light on the strategic, ideological, and political dimensions that defined this global struggle. Gaddis's narrative emphasizes the complexities and nuances of the Cold War, making it accessible to both scholars and general readers. This work is an essential read for those interested in understanding the historical roots and impact of the Cold War on contemporary international relations.",
   },
 ];
 

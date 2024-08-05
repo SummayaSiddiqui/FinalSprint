@@ -5,7 +5,9 @@ import ProductDetails from "./components/productdetails/ProductDetails";
 import ShoppingCart from "./components/shoppingcart/ShoppingCart";
 import CheckOut from "./components/checkout/CheckOut";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import { ShoppingCartProvider } from "./components/shoppingcartcontext/ShoppingCartContext";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const App = () => {
   return (
@@ -21,6 +23,7 @@ const App = () => {
               <Route path="/checkout" element={<CheckOut />} />
             </Routes>
           </div>
+          <Footer />
         </ShoppingCartProvider>
       </div>
     </Router>
