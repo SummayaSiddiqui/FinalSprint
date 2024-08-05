@@ -34,14 +34,13 @@ const ProductList = () => {
             />
             <div className="product-details">
               <h2 className="product-title">{product.name}</h2>
-              <br />
               <p className="product-description">{product.description}</p>
               <p className="product-price">${product.price.toFixed(2)}</p>
               <Link to={`/products/${product.id}`}>View Details</Link>
               <button
                 className="button-style"
                 onClick={() => handleAddToCart(product)}>
-                Add to Cart
+                <i className="fas fa-cart-plus"></i> Add to Cart
               </button>
             </div>
           </div>

@@ -131,7 +131,9 @@ const ShoppingCart = () => {
                       className="cart-image"
                     />
                   </div>
-                  <div className="cart-column">{item.name}</div>
+                  <div className="cart-column bold-item-name">
+                    {item.name}
+                  </div>
                   <div className="cart-column">${price.toFixed(2)}</div>
                   <div className="cart-column">
                     <input

@@ -65,8 +65,10 @@ const ProductDetails = () => {
             className="detail-image"
           />
           <p className="product-price">Price: ${product.price}</p>
-          <button className="button-style" onClick={handleAddToCart}>
-            <FontAwesomeIcon icon={faShoppingCart} /> Add to Cart
+          <button
+            className="button-style"
+            onClick={() => handleAddToCart(product)}>
+            <i className="fas fa-cart-plus"></i> Add to Cart
           </button>
         </div>
         <p className="product-description">{product.summary}</p>

@@ -60,12 +60,20 @@ body {
   padding: 10px 20px;
   font-size: 20px;
   font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 
 .header-container nav ul li a:hover {
-  text-decoration: underline;
+  color: #2e5c12;
 }
 
+.header-container nav ul li a i {
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+/* Footer Styling */
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -135,7 +143,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  width: calc(50% - 20px); /* Adjust to fit two items with gap */
+  width: calc(50% - 20px);
   display: flex;
   align-items: center;
   text-align: left;
@@ -313,22 +321,19 @@ body {
 .cart-item {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 10px; /* Adjust spacing as needed */
+  gap: 10px;
   align-items: center;
 }
 
 .cart-column {
   display: flex;
-  align-items: center; /* Vertically center the content */
-  justify-content: center; /* Horizontally center the content */
-}
-
-.cart-item .cart-column:last-child {
-  display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.bold-item-name {
+  font-weight: bold;
+}
 .cart-image {
   width: 50px;
   height: 75px;
@@ -342,8 +347,8 @@ body {
 
 .remove-icon {
   cursor: pointer;
-  font-size: 20px; /* Adjust size as needed */
-  color: #ff4d4d; /* Adjust color as needed */
+  font-size: 20px;
+  color: #ff4d4d;
 }
 
 /* Shopping Context component */
