@@ -38,6 +38,8 @@ import { useParams } from "react-router-dom";
 import { getProductById } from "../../api";
 import { useShoppingCart } from "../shoppingcartcontext/ShoppingCartContext";
 import Notification from "../notification/Notification";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -63,12 +65,13 @@ const ProductDetails = () => {
             className="detail-image"
           />
           <p className="product-price">Price: ${product.price}</p>
+          <button className="button-style" onClick={handleAddToCart}>
+            <FontAwesomeIcon icon={faShoppingCart} /> Add to Cart
+          </button>
         </div>
         <p className="product-description">{product.summary}</p>
       </div>
-      <button className="button-style" onClick={handleAddToCart}>
-        Add to Cart
-      </button>
+
       {notification && (
         <Notification
           message={notification}

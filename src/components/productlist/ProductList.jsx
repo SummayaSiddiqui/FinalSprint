@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { getProducts } from "../../api";
 import { Link } from "react-router-dom";
+import { useShoppingCart } from "../shoppingcartcontext/ShoppingCartContext"; // Adjust path as needed
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
+  const [notification, setNotification] = useState(""); // State for notification
+  const { addToCart } = useShoppingCart(); // Import addToCart function from your cart context
 
   useEffect(() => {
     setProducts(getProducts());
   }, []);
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    setNotification(`${product.name} has been added to your cart!`);
+
+    setTimeout(() => {
+      setNotification("");
+    }, 3000);
+  };
 
   return (
     <div className="product-container">
@@ -26,10 +38,16 @@ const ProductList = () => {
               <p className="product-description">{product.description}</p>
               <p className="product-price">${product.price.toFixed(2)}</p>
               <Link to={`/products/${product.id}`}>View Details</Link>
+              <button
+                className="button-style"
+                onClick={() => handleAddToCart(product)}>
+                Add to Cart
+              </button>
             </div>
           </div>
         ))}
       </div>
+      {notification && <div className="notification">{notification}</div>}
     </div>
   );
 };
