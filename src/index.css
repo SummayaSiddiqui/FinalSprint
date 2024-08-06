@@ -666,3 +666,20 @@ body {
     width: 100%;
 }
 }
+
+@media (max-width: 500px) {
+.book-details{
+  display: flex;
+  flex-direction: column;
+}
+
+.book-price img{
+  width: 290px;
+}
+.product-description{
+  font-size: 20px;
+  margin: 0;
+  padding: 20px 0;
+}
+
+}
