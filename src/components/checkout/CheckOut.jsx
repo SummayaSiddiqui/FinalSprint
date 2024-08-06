@@ -64,9 +64,7 @@ const Checkout = () => {
                       className="cart-image"
                     />
                   </div>
-                  <div className="cart-column bold-item-name">
-                    {item.name}
-                  </div>
+                  <div className="cart-column bold-item-name">{item.name}</div>
                   <div className="cart-column">${price.toFixed(2)}</div>
                   <div className="cart-column">{quantity}</div>
                   <div className="cart-column">${totalPrice}</div>
@@ -75,7 +73,6 @@ const Checkout = () => {
             })}
           </ul>
           <div className="summary-container">
-            <div className="separator"></div>
             <div className="summary-row">
               <div>Subtotal</div>
               <div>${subtotal.toFixed(2)}</div>
@@ -84,6 +81,7 @@ const Checkout = () => {
               <div>Taxes</div>
               <div>${taxes.toFixed(2)}</div>
             </div>
+            <div className="separator"></div>
             <div className="summary-row total-row">
               <div>Total</div>
               <div>${total.toFixed(2)}</div>
@@ -136,7 +134,8 @@ const Checkout = () => {
                 <button
                   className="button-style"
                   type="button"
-                  onClick={handleCheckout}>
+                  onClick={handleCheckout}
+                >
                   Place Your Order
                 </button>
               </div>

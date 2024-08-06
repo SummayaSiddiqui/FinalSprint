@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce);
+  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
   margin: 0;
   border-bottom: 12px solid black;
 }
@@ -83,7 +83,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce);
+  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
 }
 
 .footer-content {
@@ -128,7 +128,7 @@ body {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce);
+  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
 }
 
 .product-grid {
@@ -149,7 +149,7 @@ body {
   display: flex;
   align-items: center;
   text-align: left;
-  background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce);
+  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
 }
 
 .product-image {
@@ -198,7 +198,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce);
+  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
 }
 
 .book-details {
@@ -251,7 +251,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   border: 1px solid #2e5c12;
-  background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce);
+  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
   color: black;
   padding: 12px;
   border-radius: 8px;
@@ -372,7 +372,7 @@ body {
     gap: 10px;
     align-items: center;
     text-align: left;
-    background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce);
+    /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
   }
 
   .product-box img {
@@ -392,7 +392,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce);
+  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
 }
 
 .summary-container {
@@ -476,7 +476,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce);
+  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
 }
 
 .cart-container h1 {
