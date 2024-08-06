@@ -12,6 +12,12 @@ const Checkout = () => {
   const [cardDetails, setCardDetails] = useState("");
 
   const handleCheckout = () => {
+    // Check if any fields are empty
+    if (!firstName || !lastName || !address || !cardDetails) {
+      setNotification("All fields are required to proceed.");
+      return;
+    }
+
     // Logic to handle checkout
     setNotification("Your order has been placed successfully!");
   };
@@ -23,7 +29,7 @@ const Checkout = () => {
     return total + price * quantity;
   }, 0);
 
-  const taxRate = 0.15; // Example tax rate of 7%
+  const taxRate = 0.15;
   const taxes = subtotal * taxRate;
   const total = subtotal + taxes;
 

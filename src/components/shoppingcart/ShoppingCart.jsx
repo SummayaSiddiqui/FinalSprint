@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 const ShoppingCart = () => {
   const { cartItems, removeFromCart, updateCartItemQuantity } =
     useShoppingCart();
-  const navigate = useNavigate(); // Hook to navigate programmatically
-
+  const navigate = useNavigate();
   const handleQuantityChange = (itemId, newQuantity) => {
     if (newQuantity > 0) {
       updateCartItemQuantity(itemId, newQuantity);
@@ -14,7 +13,7 @@ const ShoppingCart = () => {
   };
 
   const handleCheckout = () => {
-    navigate("/checkout"); // Navigate to Checkout page
+    navigate("/checkout");
   };
 
   return (
