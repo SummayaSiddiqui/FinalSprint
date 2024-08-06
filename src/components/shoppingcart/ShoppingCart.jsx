@@ -32,14 +32,7 @@ const ShoppingCart = () => {
       ) : (
         <>
           <ul className="shopping-cart-list">
-            <li className="cart-header">
-              <div className="cart-column"></div>
-              <div className="cart-column">Title</div>
-              <div className="cart-column">Price</div>
-              <div className="cart-column">Quantity</div>
-              <div className="cart-column">Total Price</div>
-              <div className="cart-column">Remove</div>
-            </li>
+
             {cartItems.map((item) => {
               const price = parseFloat(item.price) || 0;
               const quantity = parseInt(item.quantity, 10) || 0;
@@ -53,29 +46,42 @@ const ShoppingCart = () => {
                       alt={item.name}
                       className="cart-image"
                     />
-                  </div>
-                  <div className="cart-column bold-item-name">{item.name}</div>
-                  <div className="cart-column">${price.toFixed(2)}</div>
-                  <div className="cart-column">
-                    <input
-                      type="number"
-                      min="1"
-                      value={quantity}
-                      className="cart-quantity"
-                      onChange={(e) =>
-                        handleQuantityChange(
-                          item.id,
-                          parseInt(e.target.value, 10)
-                        )
-                      }
-                    />
-                  </div>
-                  <div className="cart-column">${totalPrice}</div>
-                  <div className="cart-column">
-                    <i
-                      className="fas fa-trash-alt remove-icon"
-                      onClick={() => removeFromCart(item.id)}
-                    ></i>
+                  </div>{" "}
+                  <div className="book-info">
+                    <div className="cart-column bold-item-name" id="book-name">
+                      {item.name}
+                    </div>
+                    <div className="pricing-info">
+                    <div className="cart-column price-quant">
+                      <p>Each</p>
+                      <p>${price.toFixed(2)}</p>
+                    </div>
+                    <div className="cart-column price-quant">
+                      <p>Quantity</p>
+                      <input
+                        type="number"
+                        min="1"
+                        value={quantity}
+                        className="cart-quantity"
+                        onChange={(e) =>
+                          handleQuantityChange(
+                            item.id,
+                            parseInt(e.target.value, 10)
+                          )
+                        }
+                      />
+                    </div>
+                    <div className="cart-column price-quant">
+                      <p>Total</p>
+                      <p>${totalPrice}</p>
+                    </div>
+                    <div className="cart-column">
+                      <i
+                        className="fas fa-trash-alt remove-icon"
+                        onClick={() => removeFromCart(item.id)}
+                      ></i>
+                    </div>
+                    </div>
                   </div>
                 </li>
               );
