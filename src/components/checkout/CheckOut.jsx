@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useShoppingCart } from "../shoppingcartcontext/ShoppingCartContext";
 import Notification from "../notification/Notification";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
   const { cartItems } = useShoppingCart();
@@ -37,19 +38,17 @@ const Checkout = () => {
     <div className="checkout-container">
       <h1>Checkout</h1>
       {cartItems.length === 0 ? (
-        <p className="empty-cart-message">
-          Your cart is empty. Add some items to start shopping!
-        </p>
+        <>
+          <p className="empty-cart-message">Opps, Your Cart is Empty!</p>
+          <Link to="/" className="fill-cart-button">
+            Add Items to Cart
+          </Link>
+
+          <i className="fas fa-shopping-cart empty"></i>
+        </>
       ) : (
         <>
           <ul className="shopping-cart-list">
-            <li className="cart-header">
-              <div className="cart-column"></div>
-              <div className="cart-column">Title</div>
-              <div className="cart-column">Price</div>
-              <div className="cart-column">Quantity</div>
-              <div className="cart-column">Total Price</div>
-            </li>
             {cartItems.map((item) => {
               const price = parseFloat(item.price) || 0;
               const quantity = parseInt(item.quantity, 10) || 0;
@@ -63,11 +62,26 @@ const Checkout = () => {
                       alt={item.name}
                       className="cart-image"
                     />
+                  </div>{" "}
+                  <div className="book-info">
+                    <div className="cart-column bold-item-name" id="book-name">
+                      {item.name}
+                    </div>
+                    <div className="pricing-info">
+                      <div className="cart-column price-quant">
+                        <p>Each</p>
+                        <p>${price.toFixed(2)}</p>
+                      </div>
+                      <div className="cart-column price-quant">
+                        <p>Quantity</p>
+                        <p>x{item.quantity}</p>
+                      </div>
+                      <div className="cart-column price-quant">
+                        <p>Total</p>
+                        <p>${totalPrice}</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="cart-column bold-item-name">{item.name}</div>
-                  <div className="cart-column">${price.toFixed(2)}</div>
-                  <div className="cart-column">{quantity}</div>
-                  <div className="cart-column">${totalPrice}</div>
                 </li>
               );
             })}
