@@ -546,7 +546,7 @@ body {
   display: flex;
   gap: 10px;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 .pricing-info{
   display: flex;
