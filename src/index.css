@@ -114,6 +114,7 @@ body {
 .footer-content .fab:hover {
   color: #2e5c12;
 }
+
 /* Product List Styles*/
 
 .product-container {
@@ -344,8 +345,6 @@ body {
   text-align: center;
 }
 
-/* Product list component */
-
 /* Shopping cart component */
 .cart-container {
   display: flex;
@@ -387,7 +386,7 @@ body {
 .cart-header {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 10px; /* Adjust spacing as needed */
+  gap: 10px;
   font-weight: bold;
   background-color: #f7f8f5;
   width: 100%;
@@ -426,5 +425,3 @@ body {
   font-size: 20px;
   color: #ff4d4d;
 }
-
-/* Shopping Context component */

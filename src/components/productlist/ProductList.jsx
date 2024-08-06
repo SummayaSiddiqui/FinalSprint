@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { getProducts } from "../../api";
 import { Link } from "react-router-dom";
-import { useShoppingCart } from "../shoppingcartcontext/ShoppingCartContext"; // Adjust path as needed
+import { useShoppingCart } from "../shoppingcartcontext/ShoppingCartContext";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
-  const [notification, setNotification] = useState(""); // State for notification
-  const { addToCart } = useShoppingCart(); // Import addToCart function from your cart context
-
+  const [notification, setNotification] = useState("");
+  const { addToCart } = useShoppingCart();
   useEffect(() => {
     setProducts(getProducts());
   }, []);
