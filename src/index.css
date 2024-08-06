@@ -563,6 +563,7 @@ body {
 .bold-item-name {
   font-weight: bold;
   text-align: start;
+  font-size: 1.3rem;
 }
 .cart-image {
   width: 50px;
