@@ -1,6 +1,7 @@
 import React from "react";
 import { useShoppingCart } from "../shoppingcartcontext/ShoppingCartContext";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ShoppingCart = () => {
   const { cartItems, removeFromCart, updateCartItemQuantity } =
@@ -20,9 +21,14 @@ const ShoppingCart = () => {
     <div className="cart-container">
       <h1>Shopping Cart</h1>
       {cartItems.length === 0 ? (
-        <p className="empty-cart-message">
-          Your cart is empty. Add some items to start shopping!
-        </p>
+        <>
+          <p className="empty-cart-message">Opps, Your Cart is Empty!</p>
+          <Link to="/" className="fill-cart-button">
+            Add Items to Cart
+          </Link>
+
+          <i className="fas fa-shopping-cart empty"></i>
+        </>
       ) : (
         <>
           <ul className="shopping-cart-list">
@@ -48,9 +54,7 @@ const ShoppingCart = () => {
                       className="cart-image"
                     />
                   </div>
-                  <div className="cart-column bold-item-name">
-                    {item.name}
-                  </div>
+                  <div className="cart-column bold-item-name">{item.name}</div>
                   <div className="cart-column">${price.toFixed(2)}</div>
                   <div className="cart-column">
                     <input
@@ -70,7 +74,8 @@ const ShoppingCart = () => {
                   <div className="cart-column">
                     <i
                       className="fas fa-trash-alt remove-icon"
-                      onClick={() => removeFromCart(item.id)}></i>
+                      onClick={() => removeFromCart(item.id)}
+                    ></i>
                   </div>
                 </li>
               );

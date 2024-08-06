@@ -10,6 +10,7 @@ body {
     "Helvetica Neue", sans-serif;
 }
 
+
 /* Header Styling */
 .header-container {
   width: 100%;
@@ -477,12 +478,38 @@ display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce);
+}
+
+.empty{
+  font-size: 200px;
+  padding-top: 50px;
+  padding-bottom: 230px;
+}
+
+.empty-cart-message{
+  font-size: x-large;
+  padding: 50px 0;
+}
+
+.fill-cart-button{
+  grid-column: span 2;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #2e5c12;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 .cart-detail {
