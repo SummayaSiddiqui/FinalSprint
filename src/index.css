@@ -557,7 +557,6 @@ body {
 .cart-column {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .bold-item-name {
