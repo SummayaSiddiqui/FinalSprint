@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import { getProducts } from "../../api";
 import { Link } from "react-router-dom";
 import { useShoppingCart } from "../shoppingcartcontext/ShoppingCartContext";
+import { FaCheckCircle } from "react-icons/fa";
+// import { IoIosWarning } from "react-icons/io";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [notification, setNotification] = useState("");
+  // const [icon, setIcon] = useState();
+
   const { addToCart } = useShoppingCart();
   useEffect(() => {
     setProducts(getProducts());
@@ -38,14 +42,19 @@ const ProductList = () => {
               <Link to={`/products/${product.id}`}>View Details</Link>
               <button
                 className="button-style"
-                onClick={() => handleAddToCart(product)}>
+                onClick={() => handleAddToCart(product)}
+              >
                 <i className="fas fa-cart-plus"></i> Add to Cart
               </button>
             </div>
           </div>
         ))}
       </div>
-      {notification && <div className="notification success">{notification}</div>}
+      {notification && (
+        <div className="notification success">
+          <FaCheckCircle className="checkMark" /> <p>{notification}</p>
+        </div>
+      )}
     </div>
   );
 };

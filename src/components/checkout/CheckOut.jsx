@@ -2,28 +2,32 @@ import React, { useState } from "react";
 import { useShoppingCart } from "../shoppingcartcontext/ShoppingCartContext";
 import Notification from "../notification/Notification";
 import { Link } from "react-router-dom";
+import { FaCheckCircle } from "react-icons/fa";
+import { IoIosWarning } from "react-icons/io";
 
 const Checkout = () => {
   const { cartItems } = useShoppingCart();
   const [notification, setNotification] = useState("");
-
+  const [icon, setIcon] = useState();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [address, setAddress] = useState("");
   const [cardDetails, setCardDetails] = useState("");
-  const [notificationClass, setNotificationClass] = useState("")
+  const [notificationClass, setNotificationClass] = useState("");
 
   const handleCheckout = () => {
     // Check if any fields are empty
     if (!firstName || !lastName || !address || !cardDetails) {
       setNotification("All fields are required to proceed.");
-      setNotificationClass('notification error')
+      setNotificationClass("notification error");
+      setIcon(<IoIosWarning className="warning-icon" />);
       return;
     }
 
     // Logic to handle checkout
     setNotification("Your order has been placed successfully!");
-          setNotificationClass("notification success");
+    setNotificationClass("notification success");
+          setIcon(<FaCheckCircle className="checkMark" />);
 
   };
 
@@ -163,6 +167,7 @@ const Checkout = () => {
                 message={notification}
                 onClose={() => setNotification("")}
                 className={notificationClass}
+                icon={icon}
               />
             )}
           </div>

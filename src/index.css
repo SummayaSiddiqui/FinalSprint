@@ -246,27 +246,40 @@ body {
 }
 
 .notification {
+  display: flex;
+  flex-direction: row;
   position: fixed;
   bottom: 10px;
   left: 50%;
+  align-items: center;
   transform: translateX(-50%);
   background-color: white;
   color: black;
   padding: 12px;
-  border-radius: 2px;
+  border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
+  gap: 20px;
 }
 
-.success{
-    border-left: 32px solid #5f8634;   /* Left border */ 
+.checkMark {
+  font-size: 50px;
+  color: #5f8634;
 }
 
-.error{
-      border-left: 32px solid #c5333a;   /* Left border */ 
+.warning-icon {
+  font-size: 50px;
+  color:#c5333a}
+
+.success {
+  border-left: 12px solid #5f8634; /* Left border */
+}
+
+.error {
+  border-left: 12px solid #c5333a; /* Left border */
 }
 
 /* Responsiveness Tablet */
@@ -405,7 +418,6 @@ body {
 .checkout-container {
   padding: 40px 0;
 }
-
 
 .summary-container {
   margin-top: 20px;
@@ -620,15 +632,15 @@ body {
     gap: 8px;
   }
 
-  .remove-icon{
+  .remove-icon {
     font-size: 14px;
   }
 
   .pricing-info {
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-}
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
   .price-quant p {
     font-size: 12px;
   }
@@ -646,47 +658,44 @@ body {
   }
 
   .checkout-container {
-  padding: 30px 0;
-}
-
+    padding: 30px 0;
+  }
 }
 
 /* checkout mobile responsiveness */
 
 @media (max-width: 500px) {
   .payment-details {
-  width: 95%;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.payment-row {
+    width: 95%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .payment-row {
     display: flex;
     flex-direction: column;
     gap: 0px;
     width: 100%;
-}
+  }
 }
 
 @media (max-width: 500px) {
-.book-details{
-  display: flex;
-  flex-direction: column;
-}
+  .book-details {
+    display: flex;
+    flex-direction: column;
+  }
 
-.book-price img{
-  width: 290px;
-}
-.product-description{
-  font-size: 16px;
-  margin: 0;
-  padding: 20px 0;
-}
-
-
+  .book-price img {
+    width: 290px;
+  }
+  .product-description {
+    font-size: 16px;
+    margin: 0;
+    padding: 20px 0;
+  }
 }
