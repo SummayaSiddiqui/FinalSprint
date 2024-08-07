@@ -3,22 +3,34 @@ import { getProducts } from "../../api";
 import { Link } from "react-router-dom";
 import { useShoppingCart } from "../shoppingcartcontext/ShoppingCartContext";
 import { FaCheckCircle } from "react-icons/fa";
-// import { IoIosWarning } from "react-icons/io";
+import { IoIosWarning } from "react-icons/io";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
   const [notification, setNotification] = useState("");
-  // const [icon, setIcon] = useState();
+  const [icon, setIcon] = useState();
+  const [NotificationStyle, setNotificationStyle] = useState("");
 
-  const { addToCart } = useShoppingCart();
+  const { addToCart, cartItems } = useShoppingCart();
   useEffect(() => {
     setProducts(getProducts());
   }, []);
 
   const handleAddToCart = (product) => {
-    addToCart(product);
-    setNotification(`${product.name} has been added to your cart!`);
+    const itemExists = cartItems.some((item) => item.id === product.id);
 
+    if (itemExists) {
+      setNotification(
+        "Item Already exists, Please go to cart to adjust quantity!"
+      );
+      setIcon(<IoIosWarning className="warning-icon" />);
+      setNotificationStyle("notification error");
+    } else {
+      addToCart(product);
+      setNotification(`${product.name} has been added to your cart!`);
+      setIcon(<FaCheckCircle className="checkMark" />);
+      setNotificationStyle("notification success");
+    }
     setTimeout(() => {
       setNotification("");
     }, 3000);
@@ -51,8 +63,8 @@ const ProductList = () => {
         ))}
       </div>
       {notification && (
-        <div className="notification success">
-          <FaCheckCircle className="checkMark" /> <p>{notification}</p>
+        <div className={NotificationStyle}>
+          {icon} <p>{notification}</p>
         </div>
       )}
     </div>
