@@ -30,7 +30,8 @@ const ProductDetails = () => {
           <p className="product-price">Price: ${product.price}</p>
           <button
             className="button-style"
-            onClick={() => handleAddToCart(product)}>
+            onClick={() => handleAddToCart(product)}
+          >
             <i className="fas fa-cart-plus"></i> Add to Cart
           </button>
         </div>
@@ -41,6 +42,7 @@ const ProductDetails = () => {
         <Notification
           message={notification}
           onClose={() => setNotification("")}
+          className={"notification success"}
         />
       )}
     </div>

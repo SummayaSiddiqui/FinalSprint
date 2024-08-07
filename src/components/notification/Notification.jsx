@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const Notification = ({ message, onClose }) => {
+const Notification = ({ message, onClose, className }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onClose();
@@ -8,7 +8,7 @@ const Notification = ({ message, onClose }) => {
     return () => clearTimeout(timer);
   }, [onClose]);
 
-  return <div className="notification">{message}</div>;
+  return <div className={className}>{message}</div>;
 };
 
 export default Notification;

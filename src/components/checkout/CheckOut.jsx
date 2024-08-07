@@ -11,16 +11,20 @@ const Checkout = () => {
   const [lastName, setLastName] = useState("");
   const [address, setAddress] = useState("");
   const [cardDetails, setCardDetails] = useState("");
+  const [notificationClass, setNotificationClass] = useState("")
 
   const handleCheckout = () => {
     // Check if any fields are empty
     if (!firstName || !lastName || !address || !cardDetails) {
       setNotification("All fields are required to proceed.");
+      setNotificationClass('notification error')
       return;
     }
 
     // Logic to handle checkout
     setNotification("Your order has been placed successfully!");
+          setNotificationClass("notification success");
+
   };
 
   // Calculate subtotal and taxes
@@ -158,6 +162,7 @@ const Checkout = () => {
               <Notification
                 message={notification}
                 onClose={() => setNotification("")}
+                className={notificationClass}
               />
             )}
           </div>

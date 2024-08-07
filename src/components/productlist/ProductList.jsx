@@ -45,7 +45,7 @@ const ProductList = () => {
           </div>
         ))}
       </div>
-      {notification && <div className="notification">{notification}</div>}
+      {notification && <div className="notification success">{notification}</div>}
     </div>
   );
 };

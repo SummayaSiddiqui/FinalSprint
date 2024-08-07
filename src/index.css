@@ -250,7 +250,6 @@ body {
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  border-left: 12px solid #626361;   /* Left border */ 
   background-color: white;
   color: black;
   padding: 12px;
@@ -260,6 +259,14 @@ body {
   font-size: 16px;
   font-weight: bold;
   text-align: center;
+}
+
+.success{
+    border-left: 32px solid #5f8634;   /* Left border */ 
+}
+
+.error{
+      border-left: 32px solid #c5333a;   /* Left border */ 
 }
 
 /* Responsiveness Tablet */
