@@ -272,14 +272,14 @@ body {
 
 .warning-icon {
   font-size: 50px;
-  color:#c5333a}
+  color:#b6484d}
 
 .success {
   border-left: 12px solid #5f8634; /* Left border */
 }
 
 .error {
-  border-left: 12px solid #c5333a; /* Left border */
+  border-left: 12px solid #b6484d; /* Left border */
 }
 
 /* Responsiveness Tablet */
@@ -511,6 +511,7 @@ body {
   font-size: 200px;
   padding-top: 50px;
   padding-bottom: 230px;
+  color: #55555547;
 }
 
 .empty-cart-message {
