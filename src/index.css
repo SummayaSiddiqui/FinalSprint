@@ -252,7 +252,6 @@ body {
   transform: translateX(-50%);
   border-left: 12px solid #626361;   /* Left border */ 
   background-color: white;
-  background: linear-gradient(to right, white, #f8f8f36b, #f3f6ea6a);
   color: black;
   padding: 12px;
   border-radius: 2px;
