@@ -2,7 +2,7 @@ How to run
 1- npm install
 2- npm i react-router-dom
 3- npm i react-icons
-4- npm i jest
-5- npm i @testing-library/react
-6- npm i @testing-library/user-event
-7- npm i @testing-library/jest-native
+4- npm install --save-dev jest
+5- npm i --save-dev  @testing-library/react
+6- npm i --save-dev @testing-library/jest-dom
+
