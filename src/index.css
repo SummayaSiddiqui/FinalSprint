@@ -37,9 +37,9 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
+  background: linear-gradient(to right, white, #f8f8f36b, #f3f6ea6a);
   margin: 0;
-  border-bottom: 12px solid black;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.089);
 }
 
 .header-container nav ul {
@@ -83,7 +83,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
+  background: linear-gradient(to right, white, #f8f8f36b, #f3f6ea6a);
 }
 
 .footer-content {
@@ -128,7 +128,7 @@ body {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
+  background: linear-gradient(to right, white, #f8f8f36b, #f3f6ea6a);
 }
 
 .product-grid {
@@ -149,7 +149,7 @@ body {
   display: flex;
   align-items: center;
   text-align: left;
-  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
+  background: linear-gradient(to right, white, #f8f8f36b, #f5f7f16a);
 }
 
 .product-image {
@@ -198,7 +198,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
+  background: linear-gradient(to right, white, #f8f8f36b, #f3f6ea6a);
 }
 
 .book-details {
@@ -252,7 +252,7 @@ body {
   transform: translateX(-50%);
   border-left: 12px solid #626361;   /* Left border */ 
   background-color: white;
-  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
+  background: linear-gradient(to right, white, #f8f8f36b, #f3f6ea6a);
   color: black;
   padding: 12px;
   border-radius: 2px;
@@ -373,7 +373,7 @@ body {
     gap: 10px;
     align-items: center;
     text-align: left;
-    /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
+    background: linear-gradient(to right, white, #f8f8f36b, #f3f6ea6a);
   }
 
   .product-box img {
@@ -393,7 +393,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
+  background: linear-gradient(to right, white, #f8f8f36b, #f3f6ea6a);
 }
 
 .checkout-container {
@@ -482,7 +482,7 @@ body {
   margin: 0 auto;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* background: linear-gradient(to right, #f7f8f5, #f9faec, #ebf3ce); */
+  background: linear-gradient(to right, white, #f8f8f36b, #f3f6ea6a);
 }
 
 .cart-container h1 {
