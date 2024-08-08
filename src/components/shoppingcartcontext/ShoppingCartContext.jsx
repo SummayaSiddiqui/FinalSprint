@@ -15,9 +15,7 @@ export const ShoppingCartProvider = ({ children }) => {
 
       if (existingItem) {
         return prevItems.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: 1 } // Reset quantity to 1
-            : item
+          item.id === product.id ? { ...item, quantity: 1 } : item
         );
       } else {
         return [...prevItems, { ...product, quantity: 1 }];

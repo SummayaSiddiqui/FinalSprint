@@ -13,6 +13,4 @@ describe("HEADER COMPONENT", () => {
     const homeText = screen.getByText("Home");
     expect(homeText).toBeInTheDocument();
   });
-
-  
 });
