@@ -9,6 +9,17 @@ const mockUseShoppingCart = (cartItems) => ({
 });
 
 describe("CHECKOUT COMPONENT", () => {
+  test("Checkout Renders Correctly", () => {
+    render(
+      <MemoryRouter>
+        <ShoppingCartProvider>
+          <Checkout />
+        </ShoppingCartProvider>
+      </MemoryRouter>
+    );
+    const heading = screen.getByRole("heading", { name: "Checkout" });
+    expect(heading).toBeInTheDocument();
+  });
   test("displays 'Add Items to Cart' button when cart is empty", () => {
     // Mock useShoppingCart to return an empty cart
     jest.mock(
