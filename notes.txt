@@ -5,4 +5,6 @@ How to run
 4- npm install --save-dev jest
 5- npm i --save-dev  @testing-library/react
 6- npm i --save-dev @testing-library/jest-dom
+7- npm install json-server --save-dev
+8- npm run start:json-server
 

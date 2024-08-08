@@ -17,9 +17,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "startserver": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --verbose",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:json-server": "json-server --watch db.json --port 5000"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +44,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^16.0.0",
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "json-server": "^1.0.0-beta.1"
   }
 }
