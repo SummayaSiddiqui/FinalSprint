@@ -35,7 +35,6 @@ const ProductList = () => {
       setNotification("");
     }, 3000);
   };
-
   return (
     <div className="product-container">
       <h1>Product List</h1>
