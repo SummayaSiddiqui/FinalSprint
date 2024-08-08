@@ -24,6 +24,7 @@ jest.mock("../components/shoppingcartcontext/ShoppingCartContext", () => {
 
 describe("CHECKOUT COMPONENT", () => {
   test("Checkout Renders Correctly", () => {
+    //set shopping cart to be empty
     useShoppingCart.mockImplementation(mockUseShoppingCart([]));
 
     render(
@@ -56,6 +57,7 @@ describe("CHECKOUT COMPONENT", () => {
   });
 
   test("'Add items to cart' disappears when cart is not empty", () => {
+    //set the chopping cart to contain items
     useShoppingCart.mockImplementation(
       mockUseShoppingCart([
         {
