@@ -86,15 +86,18 @@ describe("PRODUCT LIST COMPONENT", () => {
         </ShoppingCartProvider>
       </MemoryRouter>
     );
+    await waitFor(() => {
+      const addButtons = screen.getAllByText(/Add to Cart/i);
+      expect(addButtons.length).toBeGreaterThan(0); // Ensure buttons are rendered
 
-    const addButtons = screen.getAllByText(/Add to Cart/i);
-    // console.log(addButtons);
-    const firstButton = addButtons[0];
-    fireEvent.click(firstButton);
-    expect(
-      screen.getByText(
-        "Item Already exists, Please go to cart to adjust quantity!"
-      )
-    ).toBeInTheDocument();
+      const firstButton = addButtons[0];
+      fireEvent.click(firstButton);
+
+      expect(
+        screen.getByText(
+          "Item Already exists, Please go to cart to adjust quantity!"
+        )
+      ).toBeInTheDocument();
+    });
   });
 });

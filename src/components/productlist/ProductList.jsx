@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { getProducts } from "../../api";
 import { Link } from "react-router-dom";
 import { useShoppingCart } from "../shoppingcartcontext/ShoppingCartContext";
 import { FaCheckCircle } from "react-icons/fa";
@@ -12,9 +11,25 @@ const ProductList = () => {
   const [NotificationStyle, setNotificationStyle] = useState("");
 
   const { addToCart, cartItems } = useShoppingCart();
-  useEffect(() => {
-    setProducts(getProducts());
-  }, []);
+useEffect(() => {
+  // Fetch products from the JSON server
+  const fetchProducts = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/products");
+      if (!response.ok) {
+        throw new Error("Error while fetching: Response NOT ok");
+      }
+      const data = await response.json();
+      console.log("Products Fetched successfully")
+      console.log(data)
+      setProducts(data);
+    } catch (error) {
+      console.error("Failed to fetch products from server:", error);
+    }
+  };
+  fetchProducts();
+}, []);
+
 
   const handleAddToCart = (product) => {
     const itemExists = cartItems.some((item) => item.id === product.id);
